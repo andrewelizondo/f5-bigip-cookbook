@@ -18,7 +18,9 @@
 #
 
 # add currrent dir to load path
-$LOAD_PATH << File.dirname(__FILE__)
+#$LOAD_PATH << File.dirname(__FILE__)
+$:.unshift File.expand_path("../files/lib", File.dirname(__FILE__))
+puts "Added #{File.expand_path("../files/lib", File.dirname(__FILE__))}"
 
 require 'load_balancer/ltm'
 
